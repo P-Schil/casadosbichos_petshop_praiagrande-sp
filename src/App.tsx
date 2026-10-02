@@ -37,7 +37,7 @@ function Header({ open, setOpen }: { open: boolean; setOpen: (value: boolean) =>
         <button className="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-slate-800 lg:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open}>{open ? <X /> : <Menu />}</button>
       </div>
       {open && <nav className="border-t border-slate-100 bg-white px-5 py-5 lg:hidden" aria-label="Menu mobile">
-        {links.map(([id, label]) => <a key={id} href={`#${id`} } onClick={() => setOpen(false)} className="block border-b border-slate-100 py-3 font-semibold text-slate-700">{label}</a>)}
+        {links.map(([id, label]) => <a key={id} href={`#${id}`} onClick={() => setOpen(false)} className="block border-b border-slate-100 py-3 font-semibold text-slate-700">{label}</a>)}
         <a href={WHATSAPP} target="_blank" rel="noreferrer" className="mt-4 block rounded-xl bg-[#1D4ED8] px-5 py-3 text-center font-bold text-white">Quero Tirar Dúvidas</a>
       </nav>}
     </header>
